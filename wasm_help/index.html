@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>WASM Flappy</title>
+  </head>
+  <body>
+    <h1>WASM Flappy</h1>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <script src="./flappy.js"></script>
+    <script>
+      window.addEventListener("load", async () => {
+        await wasm_bindgen("./flappy_bg.wasm");
+      });
+    </script>
+  </body>
+</html>
